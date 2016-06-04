@@ -1,0 +1,87 @@
+@import 'global/variables.scss';
+@import 'global/aliases.scss';
+@import 'global/mixins.scss';
+@import 'components/type.scss';
+
+.container {
+	lost-utility: clearfix;
+	lost-center: 980px;
+	.item {
+		lost-waffle: 1/3;
+		color: $color;
+	}
+}
+
+.row {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 92%;
+}
+.article-row {
+  display: flex;
+  margin-bottom: 48px;
+  & > * {
+    flex: 1;
+  }
+}
+.article-text, .article-image {
+  padding: 5vw;
+  margin: 0 24px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.article-text {
+  width: 100%;
+  float: left;
+}
+
+.article-image {
+  overflow: hidden;
+  background: #eee;
+  img {
+    box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
+  }
+}
+
+img {
+	width: 100%;
+}
+
+.m-scene {
+	.scene_element {
+		  animation-duration: 0.20s;
+		  transition-timing-function: ease-in;
+			animation-fill-mode: both;
+	}
+	.scene_element--fadein {
+		  animation-name: fadeIn;
+	}
+	.scene_element--fadeinup {
+		animation-name: fadeInUp;
+	}
+	&.is-exiting {
+		.scene_element {
+			  animation-direction: alternate-reverse;
+		}
+	}
+}
+
+@keyframes fadeInUp {
+0% {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0); }
+100% {
+  opacity: 1;
+  transform: none;
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
