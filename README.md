@@ -8,4 +8,10 @@ then
 
 `gulp`
 
+cd into `/build`
+
+run
+
+`python -m SimpleHTTPServer`
+
 
