@@ -10,4 +10,5 @@ gulp.task('watch', function() {
 	gulp.watch(config.src_dir + config.styles.src_dir + '**/*' + config.styles.extension, ['styles']);
 	gulp.watch(config.src_dir + config.pug.src_dir + '**/*.pug', ['templates']);
 	gulp.watch(config.src_dir + config.scripts.src_dir + '**/*.coffee', ['scripts']);
+	gulp.watch(config.src_dir + config.fonts.src_dir + '**/*', ['fonts']);
 });

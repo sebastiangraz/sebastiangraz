@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'NeueHaasUnica';
+  src:  url('/fonts/NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnicaW1G-Regular.woff') format('woff');
+}
+
+
 body, html {
-	font-family: 'helvetica';
+	font-family: 'NeueHaasUnica';
 }
 
 p {

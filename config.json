@@ -14,5 +14,9 @@
 		"src_dir": "styles/",
 		"dest_dir": "css/",
 		"extension": ".scss"
+	},
+	"fonts": {
+		"src_dir": "fonts/",
+		"dest_dir": "fonts/"
 	}
 }
