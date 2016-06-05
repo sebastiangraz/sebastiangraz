@@ -16,7 +16,7 @@ jQ ->
     prefetch: true
     cacheLength: 2
     onStart:
-      duration: 200
+      duration: 250
       render: ($container) ->
         # Add your CSS animation reversing class
         $container.addClass 'is-exiting'

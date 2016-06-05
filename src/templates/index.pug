@@ -1,16 +1,44 @@
-include head.pug
-#main.index.m-scene.row
-  .m-header.scene_element.scene_element--fadein
-    h1 PORTFOLIO 2016
-    p
-      | To run this demo locally, start a server in the root of this repository. If you have python installed, you can simply run
-      code python -m SimpleHTTPServer
-      |  after you
-      code cd
-      |  into the repo.
-  .m-page.scene_element.scene_element--fadeinup
-    h2
-      a(href='./case.html') Detail page demo
-    p
-      | Voluptatum doloribus est omnis molestiae sed. Officia sint et repellat dolorum a velit. Ipsam velit explicabo repudiandae qui ratione voluptas repellat exercitationem magni commodi.
+doctype html
+html
+  include head.pug
+  body
+    #main.scene
+      include header.pug
+      .row
+        .scene_element.scene_element--fadeinup
+          .intro
+            h1 Sebastian Graz
+            p
+              | I am a designer and a front-end developer based in London &#9748;
+              br
+              | I strive to create zero-bullshit easy to use digital products
+
+        .scene_element.scene_element--fadeInUpDelay
+          .cases
+            h4 Work work work work
+            .case
+              h2
+                a(href='case-poetry.html') The Poetry Hour
+                  sup 2016
+              p Poetry portal where users can create their own memes
+            .case
+              h2
+                a(href='case-poetry.html') Delhaize
+                  sup 2015
+              p Grocery E-commerce
+            .case
+              h2
+                a(href='case-poetry.html') Volvo
+                  sup 2014
+              p Design Pitch
+            .case
+              h2
+                a(href='case-poetry.html') Husqvarna
+                  sup 2014
+              p Global web presence redesign
+            .case
+              h2
+                a(href='case-poetry.html') Tena
+                  sup 2014
+              p Platform redesign
 include foot.pug

@@ -15,6 +15,10 @@
 		"dest_dir": "css/",
 		"extension": ".scss"
 	},
+	"images": {
+		"src_dir": "images/",
+		"dest_dir": "images/"
+	},
 	"fonts": {
 		"src_dir": "fonts/",
 		"dest_dir": "fonts/"

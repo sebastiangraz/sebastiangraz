@@ -1,0 +1,34 @@
+doctype html
+html
+  include head.pug
+  body
+    #main.scene
+      include header.pug
+      .scene_element.scene_element--fadeinupReverse
+        .intro
+          .intro-image--poetry
+            img(src='images/maxresdefault.jpg')
+          .intro--text
+            h1
+              | The Poetry Hour
+            h3
+              | Christian Fischbacher, one of Switzerland's oldest textile brands, produces some of the world's most-luxurious fabrics, carpets and accessories for the home.
+            p
+              | The company approached Six to produce a suite of branding materials for its new sub-brand, CF by Christian Fischbacher. A contemporary identity was required for the CF line to attract a younger, yet still discerning, audience and reflect the deviation from Christian Fischbacher's traditional range. Six also produced print and packaging designs, illustrations, and swing tickets and tags.
+        .row
+          .article-row
+            .article-image
+              img(src='images/poetry1.png', alt='img')
+          .article-row
+            .article-text
+              h3 Iconography reimagined
+              p
+                | The idea behind the iconograpy was simple. Make sure its legible for all sizes etc
+            .article-image.article-image--nopadding
+              img(src='images/poetry1.png', alt='img')
+          .article-row
+            .article-image
+              img(src='images/mobilepoetry-1.png', alt='img')
+            .article-image
+              img(src='images/mobilepoetry-1.png', alt='img')
+include foot.pug

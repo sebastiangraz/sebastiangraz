@@ -12,22 +12,51 @@
 	}
 }
 
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 .row {
-  max-width: 1024px;
+  max-width: 1440px;
   margin: 0 auto;
   width: 92%;
 }
+
+header {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	img {
+		margin: 0 auto;
+		display: block;
+    max-width: 64px;
+		margin-top: 0.5rem;
+	}
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+
 .article-row {
   display: flex;
   margin-bottom: 48px;
 	align-items: center;
   & > * {
     flex: 1;
+		flex-basis: 50%;
   }
 }
 .article-text, .article-image {
   padding: 5vw;
-  margin: 0 24px;
+  margin: 0 1.5rem;
 }
 .article-text {
   width: 100%;
@@ -40,35 +69,101 @@
   img {
     box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
   }
+	&--nopadding {
+		padding: 0;
+    box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
+	}
+}
+
+.intro {
+	padding: 5rem 0;
+	overflow: hidden;
+	position: relative;
+	&--text {
+			max-width: 480px;
+			margin: 0 auto;
+			padding: 0 1.5rem;
+	}
+}
+
+.intro-image--poetry {
+	position: absolute;
+	    top: 0px;
+	    transform: translate(50%);
+	    z-index: -1;
+			img {
+				max-height: 540px;
+				object-fit: contain;
+			}
+}
+
+.case {
+	& + & {
+			margin-top: 3rem;
+	}
+	sup {
+		fs: 1rem;
+		margin-left: 0.25rem;
+	}
+	h2 {
+		margin-bottom: 0rem;
+	}
 }
 
 img {
 	width: 100%;
+	display: block;
 }
 
-.m-scene {
+.scene {
 	.scene_element {
-		  animation-duration: 0.20s;
+		  animation-duration: .25s;
 		  transition-timing-function: ease-in;
 			animation-fill-mode: both;
-	}
-	.scene_element--fadein {
-		  animation-name: fadeIn;
-	}
-	.scene_element--fadeinup {
-		animation-name: fadeInUp;
-	}
-	&.is-exiting {
-		.scene_element {
-			  animation-direction: alternate-reverse;
+			&--fadein {
+				  animation-name: fadeIn;
+			}
+			&--fadeinup {
+				animation-name: fadeInUp;
+			}
+			&--fadeinupReverse {
+				animation-name: fadeInUpReverse;
+			}
+			&--fadeInUpDelay {
+				animation-name: fadeInUpDelay;
+			}
 		}
+		&.is-exiting {
+			.scene_element {
+				  animation-direction: alternate-reverse;
+			}
+		}
+}
+
+@keyframes fadeInUpReverse {
+0% {
+  opacity: 0;
+  transform: translate3d(96px, 0, 0); }
+100% {
+  opacity: 1;
+  transform: none;
 	}
 }
 
 @keyframes fadeInUp {
 0% {
   opacity: 0;
-  transform: translate3d(0, 32px, 0); }
+  transform: translate3d(-24px, 0, 0); }
+100% {
+  opacity: 1;
+  transform: none;
+	}
+}
+
+@keyframes fadeInUpDelay {
+0% {
+  opacity: 0;
+  transform: translate3d(-32px, 0, 0); }
 100% {
   opacity: 1;
   transform: none;

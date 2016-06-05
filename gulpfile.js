@@ -5,4 +5,4 @@ var requireDir = require('require-dir');
 requireDir('./tasks');
 
 // Default task
-gulp.task('default', ['templates', 'styles', 'scripts', 'fonts', 'watch']);
+gulp.task('default', ['templates', 'styles', 'scripts', 'fonts', 'images' ,'watch']);
