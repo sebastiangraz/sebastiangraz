@@ -2,43 +2,48 @@ doctype html
 html
   include head.pug
   body
+    include header.pug
     #main.scene
-      include header.pug
+
       .row
         .scene_element.scene_element--fadeinup
           .intro
-            h1 Sebastian Graz
-            p
-              | I am a designer and a front-end developer based in London &#9748;
-              br
-              | I strive to create zero-bullshit easy to use digital products
+            h2
+              | My name is Sebastian Graz. I am a designer and a front-end developer based in London &#9748;
+              | I strive to create sans-bullshit easy to use digital products
 
         .scene_element.scene_element--fadeInUpDelay
+          h4 Work work work work
           .cases
-            h4 Work work work work
             .case
               h2
-                a(href='case-poetry.html') The Poetry Hour
-                  sup 2016
+              | The Poetry Hour
+              a(href='case-poetry.html')
+                sup 2016
+                img(src='images/poetry.png', alt='img')
               p Poetry portal where users can create their own memes
             .case
               h2
                 a(href='case-poetry.html') Delhaize
                   sup 2015
+                  img(src='images/delhaize.png', alt='img')
               p Grocery E-commerce
             .case
               h2
                 a(href='case-poetry.html') Volvo
                   sup 2014
+              img(src='images/delhaize.png', alt='img')
               p Design Pitch
             .case
               h2
                 a(href='case-poetry.html') Husqvarna
                   sup 2014
+              img(src='images/delhaize.png', alt='img')
               p Global web presence redesign
             .case
               h2
                 a(href='case-poetry.html') Tena
                   sup 2014
+                            img(src='images/delhaize.png', alt='img')
               p Platform redesign
 include foot.pug
