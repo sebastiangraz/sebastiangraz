@@ -1,49 +1,26 @@
 doctype html
 html
-  include head.pug
+  include _head.pug
   body
-    include header.pug
+    include _header.pug
     #main.scene
-
       .row
         .scene_element.scene_element--fadeinup
-          .intro
+          .intro.bio
             h2
               | My name is Sebastian Graz. I am a designer and a front-end developer based in London &#9748;
-              | I strive to create sans-bullshit easy to use digital products
-
         .scene_element.scene_element--fadeInUpDelay
-          h4 Work work work work
+          h3.case-title Selected works
           .cases
-            .case
-              h2
-              | The Poetry Hour
-              a(href='case-poetry.html')
+            a(href='case-poetry.html').case
+              h2 The Poetry Hour
                 sup 2016
-                img(src='images/poetry.png', alt='img')
+              img(src='images/poetry.png', alt='img')
               p Poetry portal where users can create their own memes
-            .case
-              h2
-                a(href='case-poetry.html') Delhaize
-                  sup 2015
-                  img(src='images/delhaize.png', alt='img')
-              p Grocery E-commerce
-            .case
-              h2
-                a(href='case-poetry.html') Volvo
-                  sup 2014
+            a(href='case-delhaize.html').case
+              h2 Delhaize
+                sup 2016
               img(src='images/delhaize.png', alt='img')
-              p Design Pitch
-            .case
-              h2
-                a(href='case-poetry.html') Husqvarna
-                  sup 2014
-              img(src='images/delhaize.png', alt='img')
-              p Global web presence redesign
-            .case
-              h2
-                a(href='case-poetry.html') Tena
-                  sup 2014
-                            img(src='images/delhaize.png', alt='img')
-              p Platform redesign
-include foot.pug
+              p Poetry portal where users can create their own memes
+
+include _foot.pug

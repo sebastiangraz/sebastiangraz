@@ -1,28 +1,40 @@
 @mixin breakpoint($breakpoint: small, $orientation: none) {
-	$mq: '';
-	@if $breakpoint == small {
-		$mq: ( min-width: map(breakpoints, small, min) ) and ( max-width: map(breakpoints, small, max) );
-	} 
-	@if $breakpoint == medium {
-		$mq: ( min-width: map(breakpoints, medium, min) ) and ( max-width: map(breakpoints, medium, max) );
-	} 
-	@if $breakpoint == large {
-		$mq: ( min-width: map(breakpoints, large, min) ) and ( max-width: map(breakpoints, large, max) );
-	} 
-	@if $breakpoint == xlarge {
-		$mq: ( min-width: map(breakpoints, xlarge, min) ) and ( max-width: map(breakpoints, xlarge, max) );
-	}
+    $mq: '';
+    @if $breakpoint == small {
+        $mq: ( min-width: map(breakpoints, small, min) ) and ( max-width: map(breakpoints, small, max) );
+    }
+    @if $breakpoint == medium {
+        $mq: ( min-width: map(breakpoints, medium, min) ) and ( max-width: map(breakpoints, medium, max) );
+    }
+    @if $breakpoint == large {
+        $mq: ( min-width: map(breakpoints, large, min) ) and ( max-width: map(breakpoints, large, max) );
+    }
+    @if $breakpoint == xlarge {
+        $mq: ( min-width: map(breakpoints, xlarge, min) ) and ( max-width: map(breakpoints, xlarge, max) );
+    }
 
-	$query: $mq;
+    $query: $mq;
 
-	@if $orientation == portrait {
-		$query: $mq and (orientation: portrait);
-	} 
-	@if $orientation == landscape {
-		$query: $mq and (orientation: landscape);
-	}
+    @if $orientation == portrait {
+        $query: $mq and (orientation: portrait);
+    }
+    @if $orientation == landscape {
+        $query: $mq and (orientation: landscape);
+    }
 
-	@media $(query) {
-		@content;
-	}
+    @media ($query) {
+        @content;
+    }
+}
+
+@mixin bp($point) {
+  @if $point == small {
+    @media (max-width: map(breakpoints, small, max)) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: map(breakpoints, medium, max)) { @content; }
+  }
+  @else if $point == large {
+    @media (max-width: map(breakpoints, large, max)) { @content; }
+  }
 }

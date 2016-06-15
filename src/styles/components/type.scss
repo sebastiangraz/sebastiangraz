@@ -1,14 +1,29 @@
 @font-face {
-  font-family: 'NeueHaasUnica';
+  font-family: 'NeueHaasUnica-regular';
   src:  url('/fonts/NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
         url('/fonts/NeueHaasUnicaW1G-Regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'NeueHaasUnica-thin';
+  src:  url('/fonts/NeueHaasUnicaW1G-thin.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnicaW1G-thin.woff') format('woff');
+}
+
 
 body, html {
-	font-family: 'NeueHaasUnica';
+	font-family: 'NeueHaasUnica-regular';
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;
+  font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+h2 {
+  font-family: 'NeueHaasUnica-thin';
 }
 
 p {

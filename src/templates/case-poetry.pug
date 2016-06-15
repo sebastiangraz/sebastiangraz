@@ -1,14 +1,14 @@
 doctype html
 html
-  include head.pug
+  include _head.pug
   body
-    include header.pug
+    include _header.pug
     #main.scene
       .scene_element.scene_element--fadeinupReverse
         .intro
           .intro-image--poetry
             img(src='images/maxresdefault.jpg')
-          .intro--text
+          .intro-text
             h1
               | The Poetry Hour
             h3
@@ -31,4 +31,4 @@ html
               img(src='images/mobilepoetry-1.png', alt='img')
             .article-image
               img(src='images/mobilepoetry-1.png', alt='img')
-include foot.pug
+include _foot.pug

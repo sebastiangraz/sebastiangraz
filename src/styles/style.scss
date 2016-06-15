@@ -1,18 +1,24 @@
 @import 'global/variables.scss';
 @import 'global/aliases.scss';
 @import 'global/mixins.scss';
+@import 'global/animations.scss';
 @import 'components/type.scss';
 
+@lost flexbox flex;
+@lost gutter 32px;
+
+$max-width: 1168px;
+$header-height : 88px;
 
 .cases {
-	lost-utility: clearfix;
+	lost-center: $max-width;
 	.case {
-		lost-column: 1/2;
+		lost-column: 6/12;
 	}
 }
 
 body {
-	margin: 0;
+	margin: $header-height 0 0 0;
 }
 
 * {
@@ -20,7 +26,7 @@ body {
 }
 
 .row {
-  max-width: 1156px;
+	lost-center: $max-width;
   margin: 0 auto;
   width: 92%;
 }
@@ -31,22 +37,41 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 1;
+
 	.row {
-		height: 56px;
+		height: $header-height;
+		justify-content: space-between;
 	}
 	h4 {
 		display: inline-block;
 	}
-	img {
+	#logo {
 		display: inline-block;
     max-width: 32px;
-		float: left;
+	}
+	ul {
+		padding: 0;
+		li {
+			float: left;
+			list-style: none;
+			a {
+				margin-left: 40px;
+			}
+			&:first-child {
+				a {
+					margin-left: 0;
+				}
+			}
+		}
 	}
 }
 
 .center-v {
 	display: flex;
 	align-items: center;
+}
+.case-title {
+	text-align: center;
 }
 
 .article-row {
@@ -84,13 +109,17 @@ header {
 }
 
 .intro {
-	padding: 5rem 0;
+	padding: 3rem 0;
 	overflow: hidden;
 	position: relative;
-	&--text {
+
+	&-text {
 			max-width: 480px;
 			margin: 0 auto;
 			padding: 0 1.5rem;
+	}
+	&.bio {
+		lost-column: 6/12;
 	}
 }
 
@@ -110,7 +139,7 @@ header {
 		fs: 1rem;
 		margin-left: 0.25rem;
 	}
-	h2 {
+	h2 a{
 		margin-bottom: 0rem;
 		top: 16px;
 		position: relative;
@@ -145,43 +174,4 @@ img {
 				  animation-direction: alternate-reverse;
 			}
 		}
-}
-
-@keyframes fadeInUpReverse {
-0% {
-  opacity: 0;
-  transform: translate3d(96px, 0, 0); }
-100% {
-  opacity: 1;
-  transform: none;
-	}
-}
-
-@keyframes fadeInUp {
-0% {
-  opacity: 0;
-  transform: translate3d(-24px, 0, 0); }
-100% {
-  opacity: 1;
-  transform: none;
-	}
-}
-
-@keyframes fadeInUpDelay {
-0% {
-  opacity: 0;
-  transform: translate3d(-32px, 0, 0); }
-100% {
-  opacity: 1;
-  transform: none;
-	}
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

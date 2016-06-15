@@ -30,20 +30,20 @@ gulp.task('styles', function () {
 
     return gulp.src(source_dir + 'style' + config.styles.extension)
         .pipe( gulpif( enabled.maps, sourcemaps.init() ) )
-        .pipe( postcss([ 
-            require('postcss-conditionals'),
-            require('postcss-import'),
-            require('postcss-sassy-mixins'),
-            require('postcss-map')({
-                basePath: source_dir + 'config/',
-                maps: [ 'breakpoints.yml' ]
-            }),
-        	require('postcss-nested'),
-            require('postcss-simple-vars'),
-        	require('lost'), 
-            require('rucksack-css'),
-        	require('autoprefixer'), 
-        	require('precss') 
+        .pipe( postcss([
+          require('postcss-conditionals'),
+          require('postcss-import'),
+          require('postcss-sassy-mixins'),
+          require('postcss-map')({
+            basePath: source_dir + 'config/',
+            maps: [ 'breakpoints.yml']
+          }),
+          require('postcss-nested'),
+          require('postcss-simple-vars'),
+          require('lost'),
+          require('rucksack-css'),
+          require('autoprefixer'),
+          require('precss')
         ]) )
         .pipe( rename('style.css') )
         .pipe( gulpif( enabled.maps, sourcemaps.write('.') ) )
