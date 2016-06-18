@@ -53,9 +53,9 @@ gulp.task('coffee', function () {
       .pipe( livereload() );
 });
 
-gulp.task('scripts', ['coffee'], function() {
+gulp.task('scripts', gulp.series('coffee', function() {
   var dest_dir = config.dest_dir + config.scripts.dest_dir;
   return gulp.src(dest_dir + 'scripts.js')
       .pipe( gulpif( enabled.minify, uglify() ) )
       .pipe( gulp.dest(dest_dir) );
-});
+}));

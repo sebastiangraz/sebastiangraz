@@ -5,4 +5,8 @@ var requireDir = require('require-dir');
 requireDir('./tasks');
 
 // Default task
-gulp.task('default', ['templates', 'styles', 'scripts', 'fonts', 'images' ,'watch']);
+gulp.task('default', gulp.series('clean', 'templates', 'styles', 'scripts', 'fonts', 'images' ,'watch', function(done) {
+    // default task code here
+    console.log('finished build');
+    done();
+}));
