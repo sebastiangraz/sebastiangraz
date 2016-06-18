@@ -4,17 +4,47 @@ html
   body
     #main.scene
       include _header.pug
-      .scene_element.scene_element--fadeinupReverse
-        .intro
+      .scene_element.scene_element--fadeInDown
+        .case-top
+          .row
+            h1
+              | The Poetry Hour
+              sup 2016
+            .case-meta
+              ul.case-role
+                p Role
+                li
+                  p
+                    | Front-end developer
+                li
+                  p
+                    | Art Direction
+                li
+                  p
+                    | Design and UX
+              ul.case-tags
+                p Tags
+                li
+                  p
+                    | Web design
+                li
+                  p
+                    | Identity
+                li
+                  p
+                    | CMS
+      .scene_element.scene_element--fadeInDownDelay
+        .intro-case
           .intro-image--poetry
             img(src='images/maxresdefault.jpg')
           .intro-text
-            h1
-              | The Poetry Hour
+            h2
+              | Poetry reimagined
             h3
               | Christian Fischbacher, one of Switzerland's oldest textile brands, produces some of the world's most-luxurious fabrics, carpets and accessories for the home.
             p
               | The company approached Six to produce a suite of branding materials for its new sub-brand, CF by Christian Fischbacher. A contemporary identity was required for the CF line to attract a younger, yet still discerning, audience and reflect the deviation from Christian Fischbacher's traditional range. Six also produced print and packaging designs, illustrations, and swing tickets and tags.
+      .scene_element.scene_element--fadein
         .row
           .article-row
             .article-image

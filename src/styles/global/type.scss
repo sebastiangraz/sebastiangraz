@@ -5,9 +5,9 @@
 }
 
 @font-face {
-  font-family: 'NeueHaasUnica-thin';
-  src:  url('/fonts/NeueHaasUnicaW1G-thin.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnicaW1G-thin.woff') format('woff');
+  font-family: 'NeueHaasUnica-light';
+  src:  url('/fonts/NeueHaasUnicaW1G-light.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnicaW1G-light.woff') format('woff');
 }
 
 
@@ -22,8 +22,14 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
 }
 
+h1 {
+  fs: responsive 32px 48px;
+  font-family: 'NeueHaasUnica-light';
+  line-height: 1.2;
+}
+
 h2 {
-  font-family: 'NeueHaasUnica-thin';
+  font-family: 'NeueHaasUnica-light';
 }
 
 p {
@@ -32,6 +38,8 @@ p {
 
 a {
 	color: $color;
-	ts: color .5s ease;
   text-decoration: none;
+  &:hover {
+    color: #000;
+  }
 }

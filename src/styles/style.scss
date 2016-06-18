@@ -2,18 +2,16 @@
 @import 'global/aliases.scss';
 @import 'global/mixins.scss';
 @import 'global/animations.scss';
-@import 'components/type.scss';
+@import 'global/type.scss';
 
-@lost flexbox flex;
-@lost gutter 32px;
+@import 'components/case-top.scss';
 
-$max-width: 1168px;
-$header-height : 88px;
+
 
 .cases {
 	lost-center: $max-width;
 	.case {
-		lost-column: 6/12;
+		lost-column: 1/2;
 	}
 }
 
@@ -66,6 +64,18 @@ header {
 	}
 }
 
+a.cta {
+	padding: 1rem;
+	display: inline-block;
+	&:hover {
+		border-color: #000;
+	}
+	&:after {
+    content:'\2192';
+		margin-left: 1rem;
+	}
+}
+
 .center-v {
 	display: flex;
 	align-items: center;
@@ -112,17 +122,21 @@ header {
 	padding: 3rem 0;
 	overflow: hidden;
 	position: relative;
-
 	&-text {
 			max-width: 480px;
 			margin: 0 auto;
 			padding: 0 1.5rem;
 	}
 	&.bio {
-		lost-column: 6/12;
+		lost-column: 7/12;
 	}
 }
-
+.intro-case {
+	padding: 3rem 0;
+	overflow: hidden;
+	position: relative;
+	top:-$header-height;
+}
 .intro-image--poetry {
 	position: absolute;
 	    top: 0px;
@@ -167,6 +181,13 @@ img {
 			}
 			&--fadeInUpDelay {
 				animation-name: fadeInUpDelay;
+			}
+			&--fadeInDown {
+				animation-name: fadeInDown;
+			}
+			&--fadeInDownDelay {
+				animation-name: fadeInDownDelay;
+			  animation-duration: .4s;
 			}
 		}
 		&.is-exiting {
