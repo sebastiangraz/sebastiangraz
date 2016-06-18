@@ -64,6 +64,25 @@ header {
 	}
 }
 
+ul.column {
+	margin: 0;
+	padding: 0;
+	columns: 2;
+	list-style: none;
+
+}
+
+.profile {
+	h3 {
+		margin: 0;
+		float: left;
+		width: 240px;
+	}
+	&-section {
+		margin-bottom: 3.5rem;
+	}
+}
+
 a.cta {
 	padding: 1rem;
 	display: inline-block;
@@ -118,28 +137,29 @@ a.cta {
 	}
 }
 
-.intro {
-	padding: 3rem 0;
-	overflow: hidden;
-	position: relative;
-	&-text {
-			max-width: 480px;
-			margin: 0 auto;
-			padding: 0 1.5rem;
-	}
-	&.bio {
-		lost-column: 7/12;
-	}
-}
 .intro-case {
+	lost-center: 480px;
 	padding: 3rem 0;
 	overflow: hidden;
 	position: relative;
 	top:-$header-height;
 }
+
+.intro {
+	padding: 3rem 0;
+	overflow: hidden;
+	position: relative;
+	&-text {
+			margin: 0 auto;
+			padding: 0 1.5rem;
+	}
+	&.bio {
+	}
+}
+
 .intro-image--poetry {
 	position: absolute;
-	    top: 0px;
+	    top: -$header-height;
 	    transform: translate(50%);
 	    z-index: -1;
 			img {
@@ -149,12 +169,14 @@ a.cta {
 }
 
 .case {
+	margin-bottom: 2rem;
+	color: #000;
 	sup {
-		fs: 1rem;
+		fs: 0.75rem;
 		margin-left: 0.25rem;
 	}
-	h2 a{
-		margin-bottom: 0rem;
+	h2{
+		margin: 0rem;
 		top: 16px;
 		position: relative;
 	}
