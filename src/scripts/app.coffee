@@ -13,17 +13,18 @@ jQ ->
   $page = undefined
   options = undefined
   smoothState = undefined
+  loadingClass = 'is-loading'
   $page = $('#main')
   options =
     debug: true
     prefetch: true
     cacheLength: 2
-    loadingClass: 'is-loading'
     onStart:
       duration: 400
       render: ($container) ->
         $container.addClass 'is-exiting'
         smoothState.restartCSSAnimations()
+        console.log 'onStart'
         return
     onReady:
       duration: 0
@@ -31,7 +32,7 @@ jQ ->
         $container.removeClass 'is-exiting'
         $('html, body').animate({ scrollTop: 0 }, 0);
         $container.html $newContent
-
+        console.log 'onReady'
         return
   smoothState = $page.smoothState(options).data('smoothState')
   return
