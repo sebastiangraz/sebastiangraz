@@ -20,25 +20,35 @@ body, html {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
+  font-family: 'NeueHaasUnica-light';
 }
 
 h1 {
   fs: responsive 32px 48px;
-  font-family: 'NeueHaasUnica-light';
   line-height: 1.2;
 }
 
-h2, h3 {
-  font-family: 'NeueHaasUnica-light';
+h2 {
+  fs: 2.5rem;
+}
+
+h3 {
+  fs: 1.75rem;
+}
+
+h4 {
+    fs: 1.25rem;
 }
 
 p {
-	fs: responsive 14px 16px;
+	fs: responsive 14px 18px;
 }
 
 a {
+	fs: responsive 14px 18px;
 	color: $color;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     color: #000;
   }

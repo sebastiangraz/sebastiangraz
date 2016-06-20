@@ -64,24 +64,31 @@ header {
 	}
 }
 
-ul.column {
-	margin: 0;
-	padding: 0;
-	columns: 2;
-	list-style: none;
-
-}
-
 .profile {
-	border-top: 1px solid rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(0,0,0,0.1);
 	padding-top:3.5rem;
-	h3 {
+	h4 {
 		margin: 0;
 		float: left;
 		width: 240px;
 	}
 	&-section {
-		margin-bottom: 3.5rem;
+		margin-bottom: 4rem;
+	}
+	ul {
+		column-count: 2;
+		column-gap: 2rem;
+		padding-left: 2rem;
+		li {
+		  display: inline-block;
+	    word-break: break-word;
+		  list-style: none;
+		  width: 100%;
+			margin: 0 0 0.75rem 0;
+			p {
+				margin: 0;
+			}
+		}
 	}
 }
 
@@ -173,15 +180,16 @@ a.cta {
 .case {
 	margin-bottom: 2rem;
 	color: #000;
-	sup {
-		fs: 0.75rem;
-		margin-left: 0.25rem;
-	}
-	h2{
+	h3{
 		margin: 0rem;
 		top: 16px;
 		position: relative;
 	}
+}
+
+sup {
+	fs: 0.75rem;
+	margin-left:0.25rem;
 }
 
 img {
